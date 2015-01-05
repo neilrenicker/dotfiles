@@ -14,7 +14,5 @@
 	prompt = false
 [diff]
 	tool = Kaleidoscope
-[core]
-	editor = sub -n -w
 [push]
 	default = simple
