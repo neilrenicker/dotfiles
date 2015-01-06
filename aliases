@@ -1,0 +1,17 @@
+# Unix
+alias ping="ping -o"
+alias ls="ls -p"
+alias cp="cp -i"
+alias mv="mv -i"
+alias rm="rm -i"
+alias c="clear"
+
+# git
+alias cleanup="git remote prune origin && git branch --merged | grep -v \* | xargs git branch -D"
+
+# Cake
+alias cs="bundle exec cake server"
+
+# Grunt 
+alias gt="grunt"
+alias gw="grunt watch"
