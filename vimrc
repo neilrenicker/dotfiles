@@ -10,9 +10,12 @@ set mouse=a
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+" Sourcing
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
+
+source ~/.ignore.vim
 
 " Softtabs, 2 spaces
 set tabstop=2
@@ -21,3 +24,8 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
+" Theming
+syntax enable
+set background=dark
+colorscheme solarized

@@ -12,6 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 " Define bundles via Github repos
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 filetype on
