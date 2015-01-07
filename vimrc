@@ -10,11 +10,10 @@ set mouse=a
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-" Sourcing
-if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
-endif
+" All plugins are source with Vundle from this file.
+source ~/.vimrc.bundles
 
+" Ignore specific filetypes
 source ~/.ignore.vim
 
 " New commands
@@ -22,6 +21,9 @@ source ~/.commands.vim
 
 " Softtabs, 2 spaces
 set tabstop=2
+set shiftwidth=2
+set shiftround
+set expandtab
 
 " Make it obvious where 80 characters is
 set textwidth=80
