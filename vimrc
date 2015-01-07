@@ -25,10 +25,10 @@ set textwidth=80
 set colorcolumn=+1
 
 " Force myself not to use arrow keys to navigate:
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
 
 " Theming
 syntax enable
