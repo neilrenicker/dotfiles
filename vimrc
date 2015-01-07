@@ -19,6 +19,9 @@ source ~/.ignore.vim
 " New commands
 source ~/.commands.vim
 
+" Custom mappings
+sourc ~/.mappings.vim
+
 " Softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
