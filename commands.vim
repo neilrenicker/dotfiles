@@ -1,1 +1,1 @@
-:command NT NERDTree
+command! NT NERDTree
