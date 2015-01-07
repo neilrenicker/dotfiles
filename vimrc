@@ -17,6 +17,9 @@ endif
 
 source ~/.ignore.vim
 
+" New commands
+source ~/.commands.vim
+
 " Softtabs, 2 spaces
 set tabstop=2
 
