@@ -11,6 +11,15 @@ inoremap JK <Esc>
 inoremap Jk <Esc>
 inoremap jK <Esc>
 
-" remap U to <C-r> for easier redo
+" Yank text to the OS X clipboard
+" From http://www.drbunsen.org/the-text-triumvirate/
+noremap <leader>y "*y
+noremap <leader>yy "*Y
+
+" Preserve indentation while pasting text from the OS X clipboard
+" From http://www.drbunsen.org/the-text-triumvirate/
+noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
+
+" Remap U to <C-r> for easier redo
 " from http://vimbits.com/bits/356
 nnoremap U <C-r>
