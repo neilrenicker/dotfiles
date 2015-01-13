@@ -10,6 +10,10 @@ set mouse=a
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+" Trigger Emmet with the tab key
+" https://github.com/mattn/emmet-vim/issues/168#issuecomment-28258900
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
 " All plugins are source with Vundle from this file.
 source ~/.vimrc.bundles
 
@@ -20,7 +24,7 @@ source ~/.ignore.vim
 source ~/.commands.vim
 
 " Custom mappings
-sourc ~/.mappings.vim
+source ~/.mappings.vim
 
 " Softtabs, 2 spaces
 set tabstop=2
