@@ -17,4 +17,13 @@
 [push]
 	default = simple
 [core]
-	editor = /usr/bin/vim
+	editor = sub -n -w
+	trustctime = false
+[alias]
+  a  = add
+  st = status
+  cm = commit
+  br = branch
+  co = checkout
+  df = diff
+  lg = log -p
