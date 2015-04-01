@@ -19,6 +19,7 @@
 [core]
   editor = vim
   trustctime = false
+  ignorecase = false
 [alias]
   a  = add
   st = status
