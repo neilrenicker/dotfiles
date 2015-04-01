@@ -17,7 +17,7 @@
 [push]
   default = simple
 [core]
-  editor = sub -n -w
+  editor = vim
   trustctime = false
 [alias]
   a  = add
