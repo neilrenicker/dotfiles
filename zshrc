@@ -1,8 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-# Default user
-DEFAULT_USER="neilrenicker"
+# Prevent full username from displaying in path.
+DEFAULT_USER="$USER"
 
 # Theming: ~/.oh-my-zsh/themes/
 ZSH_THEME="agnoster"
