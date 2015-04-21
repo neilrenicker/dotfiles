@@ -23,3 +23,9 @@ noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 " Remap U to <C-r> for easier redo
 " from http://vimbits.com/bits/356
 nnoremap U <C-r>
+
+" Force myself not to use arrow keys to navigate:
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>

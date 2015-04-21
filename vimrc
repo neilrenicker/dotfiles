@@ -15,7 +15,7 @@ let NERDTreeShowHidden=1
 " https://github.com/mattn/emmet-vim/issues/168#issuecomment-28258900
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
-" All plugins are source with Vundle from this file.
+" All plugins are sourced with Vundle from this file.
 source ~/.vimrc.bundles
 
 " Ignore specific filetypes
@@ -27,23 +27,5 @@ source ~/.commands.vim
 " Custom mappings
 source ~/.mappings.vim
 
-" Softtabs, 2 spaces
-set tabstop=2
-set shiftwidth=2
-set shiftround
-set expandtab
-
-" Make it obvious where 80 characters is
-set textwidth=80
-set colorcolumn=+1
-
-" Force myself not to use arrow keys to navigate:
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
-
-" Theming
-syntax enable
-set background=dark
-colorscheme solarized
+" Color themes and font settings
+source ~/.theme.vim
