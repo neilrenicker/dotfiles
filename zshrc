@@ -38,9 +38,9 @@ export PATH="$HOME/.bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 
 export PATH="$PATH:/usr/local/lib/node_modules"
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh --no-rehash)"
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
