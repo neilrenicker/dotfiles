@@ -19,5 +19,11 @@ Plugin 'mattn/emmet-vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'wincent/Command-T'
 
+" Bundle settings
+
+" Ignore files in NERDTree
+let NERDTreeIgnore=['\.git$', 'node_modules$[[dir]]',
+  \'bower_components$[[dir]]', '\.o&']
+
 call vundle#end()
 filetype on
