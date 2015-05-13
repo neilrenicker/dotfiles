@@ -1,3 +1,7 @@
+" This line must be the first line in the file
+" to ensure all instances of <leader> are affected
+let mapleader = ","
+
 " Use ; for : to avoid using the Shift key
 nnoremap ; :
 vnoremap ; :
