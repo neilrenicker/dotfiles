@@ -9,6 +9,9 @@ vnoremap ; :
 " Press Enter to save in normal mode
 nnoremap <CR> :w<CR>
 
+" Press Q to exit in normal mode
+nnoremap Q :q<CR>
+
 " A more accessible escape key.
 inoremap jk <Esc>
 inoremap JK <Esc>
