@@ -11,6 +11,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " Define bundles via Github repos
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'rking/ag.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'mustache/vim-mustache-handlebars'
@@ -18,12 +19,6 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'mattn/emmet-vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'wincent/Command-T'
-
-" Bundle settings
-
-" Ignore files in NERDTree
-let NERDTreeIgnore=['\.git$', 'node_modules$[[dir]]',
-  \'bower_components$[[dir]]', '\.o&']
 
 call vundle#end()
 filetype on

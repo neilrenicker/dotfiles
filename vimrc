@@ -9,6 +9,17 @@ set mouse=a
 " Searching
 set hlsearch " Highlight search results
 
+"================
+" Bundle settings
+"================
+
+" Ignore files in NERDTree
+let NERDTreeIgnore=['\.git$', 'node_modules$[[dir]]',
+  \'bower_components$[[dir]]', '\.o&']
+
+" NERDCommenter needs this
+filetype plugin on
+
 " Open NERDTree when vim opens
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
