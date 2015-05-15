@@ -40,3 +40,6 @@ nnoremap <Down> :echoe "Use j"<CR>
 " NERDTree mapping
 nnoremap <silent><leader>nn :NERDTreeToggle<CR>:wincmd =<CR>
 nnoremap <silent><leader>nf :NERDTreeFind<CR>:wincmd =<CR>
+
+" Remap :Ag
+nnoremap <leader>ag :Ag<space>
