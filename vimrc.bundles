@@ -18,8 +18,8 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mattn/emmet-vim'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'wincent/Command-T'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'kien/ctrlp.vim'
 
 call vundle#end()
 filetype on

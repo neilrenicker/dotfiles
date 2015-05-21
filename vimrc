@@ -9,9 +9,9 @@ set mouse=a
 " Searching
 set hlsearch " Highlight search results
 
-"================
+" ===============
 " Bundle settings
-"================
+" ===============
 
 " Ignore files in NERDTree
 let NERDTreeIgnore=['\.git$', 'node_modules$[[dir]]',
@@ -36,6 +36,10 @@ let g:indent_guides_start_level = 2
 " Trigger Emmet with the tab key
 " https://github.com/mattn/emmet-vim/issues/168#issuecomment-28258900
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
+" ============
+" Source Files
+" ============
 
 " All plugins are sourced with Vundle from this file.
 source ~/.vimrc.bundles

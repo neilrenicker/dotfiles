@@ -37,7 +37,15 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
-" NERDTree mapping
+" ===============
+" Bundle Mappings
+" ===============
+
+" CtrlP mappings
+nnoremap <leader>t :CtrlPRoot<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
+
+" NERDTree mappings
 nnoremap <silent><leader>nn :NERDTreeToggle<CR>:wincmd =<CR>
 nnoremap <silent><leader>nf :NERDTreeFind<CR>:wincmd =<CR>
 
