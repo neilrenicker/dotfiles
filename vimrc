@@ -27,6 +27,12 @@ let NERDTreeChDirMode = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeShowHidden=1
 
+" Turn on indent lines when vim opens
+let g:indent_guides_enable_on_vim_startup = 1
+
+" Better indent lines styles
+let g:indent_guides_start_level = 2
+
 " Trigger Emmet with the tab key
 " https://github.com/mattn/emmet-vim/issues/168#issuecomment-28258900
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")

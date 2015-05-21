@@ -19,6 +19,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'mattn/emmet-vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'wincent/Command-T'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 call vundle#end()
 filetype on
