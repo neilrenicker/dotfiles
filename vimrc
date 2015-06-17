@@ -20,12 +20,10 @@ let NERDTreeIgnore=['\.git$', 'node_modules$[[dir]]',
 " NERDCommenter needs this
 filetype plugin on
 
-" Open NERDTree when vim opens
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" NERDTree formatting
 let NERDTreeChDirMode = 1
 let NERDTreeMinimalUI = 1
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden = 1
 
 " Turn on indent lines when vim opens
 let g:indent_guides_enable_on_vim_startup = 1
