@@ -49,5 +49,8 @@ nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <silent><leader>nn :NERDTreeToggle<CR>:wincmd =<CR>
 nnoremap <silent><leader>nf :NERDTreeFind<CR>:wincmd =<CR>
 
+" NERDCommenter mappings
+nnoremap <silent><leader>cc :NERDComMinimalComment<CR>:wincmd =<CR>
+
 " Remap :Ag
 nnoremap <leader>ag :Ag<space>
