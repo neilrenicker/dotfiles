@@ -5,6 +5,13 @@
     showOnStartup: false
   core:
     projectHome: "/Users/neilrenicker/Projects"
+    disabledPackages: [
+      "vim-mode"
+    ]
+    themes: [
+      "one-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
     ignoredNames: [
       ".divshot-cache"
       ".git"
@@ -14,15 +21,11 @@
       "*.orig"
       "dist"
     ]
-    disabledPackages: [
-      "vim-mode"
-    ]
-    themes: [
-      "one-dark-ui"
-      "base16-tomorrow-dark-theme"
-    ]
   editor:
     invisibles: {}
     showIndentGuide: true
   "one-dark-ui": {}
   "vim-mode": {}
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
