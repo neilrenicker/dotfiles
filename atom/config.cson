@@ -1,0 +1,28 @@
+"*":
+  "exception-reporting":
+    userId: "1a9f1cf5-7699-d3b5-9666-be12c11cd652"
+  welcome:
+    showOnStartup: false
+  core:
+    projectHome: "/Users/neilrenicker/Projects"
+    ignoredNames: [
+      ".divshot-cache"
+      ".git"
+      "bower_components"
+      "node_modules"
+      ".DS_Store"
+      "*.orig"
+      "dist"
+    ]
+    disabledPackages: [
+      "vim-mode"
+    ]
+    themes: [
+      "one-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+  editor:
+    invisibles: {}
+    showIndentGuide: true
+  "one-dark-ui": {}
+  "vim-mode": {}
