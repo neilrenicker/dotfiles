@@ -42,6 +42,7 @@ mkrc ~/.vim  # And entire directories work too
 The specified file will be moved to the `~/.dotfiles` directory with the
 dot prefix removed. The original file will be deleted,
 then symlinked from `~/.dotfiles` back to its original location.
+It will now stay in sync and be easily managed with source control.
 
 ## Features
 
