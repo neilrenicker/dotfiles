@@ -8,7 +8,7 @@ Managed with [rcm][]
 
 Install these OS X applications before proceeding:
 
-- [iterm2][] *terminal emulator*
+- [iTerm2][] *terminal emulator*
 - [Atom][] *editor*
 - [Seil][] *remaps the caps lock key*
 - [Karabiner][] *custom key mapping*
@@ -86,7 +86,7 @@ It will now stay in sync and be easily managed with source control.
 [atom]: http://atom.io
 [zsh]: http://www.zsh.org
 [git]: http://git-scm.com
-[iterm2]: https://www.iterm2.com/
+[iTerm2]: https://www.iterm2.com/
 [Atom]: https://atom.io/
 [Seil]: https://pqrs.org/osx/karabiner/seil.html.en
 [Karabiner]: https://pqrs.org/osx/karabiner/
