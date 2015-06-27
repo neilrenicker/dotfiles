@@ -6,14 +6,10 @@ Managed with [rcm][]
 
 ## Installation on a fresh machine
 
-### Application Installation
-
 Install these OS X applications before proceeding:
 
 - [iTerm2][] *terminal emulator*
 - [Atom][] *editor*
-- [Seil][] *remaps the caps lock key*
-- [Karabiner][] *custom key mapping*
 
 ### Dotfiles Installation:
 
@@ -36,7 +32,37 @@ If you're satisfied with the dry run, install the dotfiles on your system:
 rcup
 ```
 
+## Application Installation
+
+Install [mackup][]:
+
+```
+brew install mackup
+```
+
+If you've already installed the dotfiles with the `rcup` command listed above,
+you'll have `~/.mackup.cfg` installed. Modify this configuration file to include
+the applications for which you wish to install preference files [see
+[supported applications][] or run `mackup list`]. Install all OS X applications
+on your list, including your storage engine app (Dropbox by default). There
+are more options for the mackup configuration file you might want to tinker
+with. Here are [the mackup config docs][].
+
+Once you're satisfied your applications are installed, sync their preferences
+with mackup:
+
+```
+mackup restore
+```
+
 ## Set up key mapping:
+
+Install these applications before proceeding:
+
+- [Seil][] *remaps the caps lock key*
+- [Karabiner][] *custom key mapping*
+
+### Configure key mapping settings:
 
 - Visit OS X Keyboard settings > Modifier Keys > Map `Caps Lock` to `No Action`
 - In Seil Settings, turn on `Change the caps lock key`, and map it to keycode `80`
@@ -79,3 +105,6 @@ It will now stay in sync and be easily managed with source control.
 [Seil]: https://pqrs.org/osx/karabiner/seil.html.en
 [Karabiner]: https://pqrs.org/osx/karabiner/
 [this XML for mapping Caps Lock to Hyper on hold]: https://gist.github.com/tinystride/ff59ef6b96f352f72541
+[mackup]: https://github.com/lra/mackup
+[supported applications]: https://github.com/lra/mackup#supported-applications
+[the mackup config docs]: https://github.com/lra/mackup/blob/master/doc/README.md
