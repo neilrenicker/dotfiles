@@ -6,12 +6,16 @@ Managed with [rcm][]
 
 ## Installation on a fresh machine
 
+### Application Installation
+
 Install these OS X applications before proceeding:
 
 - [iTerm2][] *terminal emulator*
 - [Atom][] *editor*
 - [Seil][] *remaps the caps lock key*
 - [Karabiner][] *custom key mapping*
+
+### Dotfiles Installation:
 
 After cloning the repo to `~/.dotfiles`, install [rcm][]:
 
@@ -36,25 +40,9 @@ rcup
 
 - Visit OS X Keyboard settings > Modifier Keys > Map `Caps Lock` to `No Action`
 - In Seil Settings, turn on `Change the caps lock key`, and map it to keycode `80`
-
-Install Karabiner settings:
-
-```
-rcup -t karabiner
-```
-
-Then visit Karabiner settings > Reload XML, and enable the checkboxes for your
-new custom bindings.
-
-### Karabiner Key Mappings:
-
-| Key            | Binds To       |
-| :------------- | :------------- |
-| Caps Lock      | Hyper (Shift + Control + Option + Command) |
-| Caps Lock + J  | Down Arrow     |
-| Caps Lock + K  | Up Arrow       |
-| Caps Lock + H  | Left Arrow     |
-| Caps Lock + L  | Right Arrow    |
+- Visit Karabiner settings > Misc & Uninstall > Open private.xml, and paste in
+[this XML for mapping Caps Lock to Hyper on hold][] (and Escape on tap).
+- Return to Karabiner settings > Change Key > Reload XML, and enable the checkboxes for your new custom `F19 to Hyper` binding.
 
 ## Adding new files to the project
 
@@ -90,3 +78,4 @@ It will now stay in sync and be easily managed with source control.
 [Atom]: https://atom.io/
 [Seil]: https://pqrs.org/osx/karabiner/seil.html.en
 [Karabiner]: https://pqrs.org/osx/karabiner/
+[this XML for mapping Caps Lock to Hyper on hold]: https://gist.github.com/tinystride/ff59ef6b96f352f72541
