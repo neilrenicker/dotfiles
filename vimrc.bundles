@@ -23,6 +23,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'pangloss/vim-javascript'
 
 call vundle#end()
 filetype on
