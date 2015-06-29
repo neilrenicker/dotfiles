@@ -28,3 +28,4 @@
   "tree-view":
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true
+  emmet: {}
