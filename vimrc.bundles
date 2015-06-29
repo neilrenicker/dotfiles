@@ -26,6 +26,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mhinz/vim-startify'
 Plugin 'elzr/vim-json'
+Plugin 'gabrielelana/vim-markdown'
 
 call vundle#end()
 filetype on
