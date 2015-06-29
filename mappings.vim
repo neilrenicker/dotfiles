@@ -54,3 +54,19 @@ nnoremap <silent><leader>cc :NERDComMinimalComment<CR>:wincmd =<CR>
 
 " Remap :Ag
 nnoremap <leader>ag :Ag<space>
+
+" Vim Fugitive mappings 
+" From https://github.com/mutewinter/dot_vim/blob/master/vundle_plugins/vim-fugitive.vim
+nnoremap <Leader>gc :Gcommit -v<CR>
+nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gp :Git push<CR>
+" Access https://github.com/aanand/git-up for a better git pull
+nnoremap <Leader>gu :!git up<CR>
+nnoremap <Leader>gd :Gvdiff<CR>
+" Exit a diff by closing the diff window
+nnoremap <Leader>gx :wincmd h<CR>:q<CR>
+" Start git command
+nnoremap <leader>gi :Git<space>
+" Undo the last commit
+command! Gcundo :Git reset HEAD~1
+
