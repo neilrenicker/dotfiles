@@ -23,6 +23,7 @@
   editor:
     invisibles: {}
     showIndentGuide: true
+    fontSize: 13
   "one-dark-ui": {}
   "vim-mode": {}
   "tree-view":
