@@ -29,3 +29,7 @@
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true
   emmet: {}
+".handlebars.html.text":
+  editor:
+    showIndentGuide: true
+    showInvisibles: false
