@@ -8,10 +8,6 @@
     disabledPackages: [
       "vim-mode"
     ]
-    themes: [
-      "one-dark-ui"
-      "base16-tomorrow-dark-theme"
-    ]
     ignoredNames: [
       ".divshot-cache"
       "bower_components"
