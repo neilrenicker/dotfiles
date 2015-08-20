@@ -30,6 +30,8 @@
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true
   emmet: {}
+  tabs:
+    usePreviewTabs: true
 ".handlebars.html.text":
   editor:
     showIndentGuide: true
