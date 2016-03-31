@@ -1,10 +1,7 @@
 "*":
-  "exception-reporting":
-    userId: "1a9f1cf5-7699-d3b5-9666-be12c11cd652"
-  welcome:
-    showOnStartup: false
+  "atom-beautify":
+    _analyticsUserId: "5ec84c94-4b36-409c-8ae5-ac977afed75e"
   core:
-    projectHome: "/Users/neilrenicker/Projects"
     disabledPackages: [
       "vim-mode"
     ]
@@ -16,19 +13,38 @@
       "*.orig"
       "dist"
     ]
+    projectHome: "/Users/neilrenicker/Projects"
   editor:
     invisibles: {}
     showIndentGuide: true
-    fontSize: 13
+    showInvisibles: true
+  emmet: {}
+  "exception-reporting":
+    userId: "1a9f1cf5-7699-d3b5-9666-be12c11cd652"
+  "file-icons":
+    coloured: false
+  linter:
+    errorPanelHeight: 67
+    lintOnFly: false
+  "linter-eslint": {}
+  "linter-stylelint":
+    disableWhenNoConfig: true
+    usePreset: false
   "one-dark-ui": {}
-  "vim-mode": {}
+  pigments: {}
+  react: {}
+  tabs:
+    usePreviewTabs: true
   "tree-view":
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true
-  emmet: {}
-  tabs:
-    usePreviewTabs: true
+  "vim-mode": {}
+  welcome:
+    showOnStartup: false
 ".handlebars.html.text":
   editor:
     showIndentGuide: true
+    showInvisibles: false
+".ini.source":
+  editor:
     showInvisibles: false
