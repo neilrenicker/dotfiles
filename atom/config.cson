@@ -1,6 +1,8 @@
 "*":
   "atom-beautify":
     _analyticsUserId: "5ec84c94-4b36-409c-8ae5-ac977afed75e"
+    general:
+      _analyticsUserId: "e3924605-57a2-414e-8c01-4eee1a321f17"
   core:
     disabledPackages: [
       "vim-mode"
@@ -24,12 +26,16 @@
   "file-icons":
     coloured: false
   linter:
-    errorPanelHeight: 67
+    errorPanelHeight: 47
     lintOnFly: false
   "linter-eslint": {}
   "linter-stylelint":
     disableWhenNoConfig: true
     usePreset: false
+  minimap:
+    plugins:
+      "minimap-autohide": true
+      "minimap-autohideDecorationsZIndex": 0
   "one-dark-ui": {}
   pigments: {}
   react: {}
