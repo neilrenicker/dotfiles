@@ -19,6 +19,9 @@ plugins=(git rbenv)
 
 source $ZSH/oh-my-zsh.sh
 
+# aws-cli autocompletion
+source /usr/local/share/zsh/site-functions/_aws
+
 # Jump to any project:
 go() { cd ~/Projects/$1; }
 _go() { _files -W ~/Projects -/; }
@@ -27,7 +30,6 @@ compdef _go go
 # User configuration
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
 
 # Aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
