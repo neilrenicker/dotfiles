@@ -14,3 +14,8 @@ alias cs="cake server"
 # Grunt 
 alias gt="grunt"
 alias gw="grunt watch"
+
+# Other
+#
+# Simple HTTP serve. cd into directory with an index.html file and type `serve`
+alias serve='python -m SimpleHTTPServer 8000'
