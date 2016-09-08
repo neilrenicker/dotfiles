@@ -1,11 +1,28 @@
 "*":
   "atom-beautify":
-    _analyticsUserId: "5ec84c94-4b36-409c-8ae5-ac977afed75e"
     general:
-      _analyticsUserId: "e3924605-57a2-414e-8c01-4eee1a321f17"
+      _analyticsUserId: "5ec84c94-4b36-409c-8ae5-ac977afed75e"
+    html:
+      indent_size: 2
+      wrap_attributes_indent_size: 2
+      wrap_line_length: 80
   core:
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".flowconfig"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
     disabledPackages: [
       "vim-mode"
+      "tree-view"
+      "react"
     ]
     ignoredNames: [
       ".divshot-cache"
@@ -17,6 +34,7 @@
     ]
     projectHome: "/Users/neilrenicker/Projects"
   editor:
+    fontSize: 16
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
@@ -25,8 +43,10 @@
     userId: "1a9f1cf5-7699-d3b5-9666-be12c11cd652"
   "file-icons":
     coloured: false
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false
   linter:
-    errorPanelHeight: 47
+    errorPanelHeight: 25
     lintOnFly: false
   "linter-eslint": {}
   "linter-stylelint":
@@ -36,8 +56,13 @@
     plugins:
       "minimap-autohide": true
       "minimap-autohideDecorationsZIndex": 0
+  nuclide:
+    "nuclide-home":
+      showHome: false
   "one-dark-ui": {}
-  pigments: {}
+  pigments:
+    extendAutocompleteToColorValue: true
+    extendAutocompleteToVariables: true
   react: {}
   tabs:
     usePreviewTabs: true
