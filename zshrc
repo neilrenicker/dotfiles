@@ -23,8 +23,8 @@ source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh/site-functions/_aws
 
 # Jump to any project:
-go() { cd ~/Projects/$1; }
-_go() { _files -W ~/Projects -/; }
+go() { cd ~/Code/$1; }
+_go() { _files -W ~/Code -/; }
 compdef _go go
 
 # User configuration
