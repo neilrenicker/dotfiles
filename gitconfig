@@ -28,3 +28,4 @@
   co = checkout
   df = diff
   lg = log -p
+  up = pull --rebase --autostash
