@@ -46,3 +46,6 @@ eval "$(rbenv init - zsh --no-rehash)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# path configuration for Postgres.app
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
