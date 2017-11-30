@@ -1,16 +1,21 @@
 "*":
   "atom-beautify":
+    css:
+      indent_size: 2
     general:
       _analyticsUserId: "5ec84c94-4b36-409c-8ae5-ac977afed75e"
     html:
       indent_size: 2
       wrap_attributes_indent_size: 2
       wrap_line_length: 80
+    js:
+      indent_size: 2
   core:
     customFileTypes:
       "source.ini": [
         ".buckconfig"
         ".flowconfig"
+        ".hgrc"
       ]
       "source.json": [
         ".arcconfig"
@@ -21,8 +26,8 @@
       ]
     disabledPackages: [
       "vim-mode"
-      "tree-view"
       "react"
+      "linter"
     ]
     ignoredNames: [
       ".divshot-cache"
@@ -33,6 +38,7 @@
       "dist"
     ]
     projectHome: "/Users/neilrenicker/Projects"
+    telemetryConsent: "no"
   editor:
     fontSize: 16
     invisibles: {}
@@ -45,13 +51,13 @@
     coloured: false
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
-  linter:
-    errorPanelHeight: 25
-    lintOnFly: false
+  linter: {}
   "linter-eslint": {}
   "linter-stylelint":
     disableWhenNoConfig: true
     usePreset: false
+  "linter-ui-default":
+    panelHeight: 69
   minimap:
     plugins:
       "minimap-autohide": true
@@ -63,6 +69,9 @@
   pigments:
     extendAutocompleteToColorValue: true
     extendAutocompleteToVariables: true
+  "prettier-atom":
+    prettierOptions: {}
+    useEslint: true
   react: {}
   tabs:
     usePreviewTabs: true
