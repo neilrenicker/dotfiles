@@ -1,92 +1,220 @@
+-- ------
+-- Config
+-- ------
 
--- A global variable for the Hyper Mode
-k = hs.hotkey.modal.new({}, "F17")
+-- Disable animation for window resizing so it's instant.
+hs.window.animationDuration = 0
+
+-- allows us to place on quarters, thirds and halves
+hs.grid.setGrid('12x12')
+hs.grid.MARGINX = 0
+hs.grid.MARGINY = 0
+
+-- A hotkey modal to emulate the hyper key.
+local hyperMode = hs.hotkey.modal.new({}, 'F17')
+
+-- Global boolean to track triggered state of Hyper.
+local hyperTriggered = false
+
+-- A custom keyStroke for ensuring that hyper's state is triggered and that
+-- there is no delay.
+-- https://github.com/Hammerspoon/hammerspoon/issues/1082
+local keyStroke = function(modifiers, key)
+  hyperTriggered = true
+  -- The 0 removes the delay between key up and down
+  hs.eventtap.keyStroke(modifiers, key, 0)
+end
 
 launch = function(appname)
   hs.application.launchOrFocus(appname)
-  k.triggered = true
+  hyperTriggered = true
 end
 
-k:bind({}, 'n', nil, function() launch('nvALT') end)
-k:bind({}, 'r', nil, function() launch('Paws for Trello') end)
-k:bind({}, 'i', nil, function() launch('iTerm') end)
-k:bind({}, 'e', nil, function() launch('Emojise') end)
-k:bind({}, 'space', nil, function() launch('Google Chrome') end)
-k:bind({}, 'u', nil, function() launch('Spotify') end)
-k:bind({}, 'o', nil, function() launch('OmniFocus') end)
-k:bind({}, 'd', nil, function() launch('Dash') end)
-k:bind({}, 't', nil, function() launch('Tower') end)
-k:bind({}, 's', nil, function() launch('Sketch') end)
-k:bind({}, 'f', nil, function() launch('Fantastical 2') end)
-k:bind({}, ',', nil, function() launch('Siri') end)
+-- --------
+-- Bindings
+-- --------
 
--- HYPER+M: Trigger Moom keyboard control
-hyper_M = function()
-  hs.eventtap.keyStroke({'shift', 'cmd', 'alt'}, '.')
-  k.triggered = true
-end
-k:bind({}, 'm', nil, hyper_M)
+hyperMode:bind({}, 'd', nil, function() launch('Dash') end)
+hyperMode:bind({}, 'e', nil, function() launch('Atom') end)
+hyperMode:bind({}, 'f', nil, function() launch('Fantastical 2') end)
+hyperMode:bind({}, 'm', nil, function() launch('iTerm') end)
+hyperMode:bind({}, 'n', nil, function() launch('nvALT') end)
+hyperMode:bind({}, 'o', nil, function() launch('OmniFocus') end)
+hyperMode:bind({}, 's', nil, function() launch('Sketch') end)
+hyperMode:bind({}, 'u', nil, function() launch('Spotify') end)
+hyperMode:bind({}, 'w', nil, function() launch('Tower') end)
+hyperMode:bind({}, 'space', nil, function() launch('Google Chrome') end)
 
 -- HYPER+C: Trigger Alfred 2 Clipboard viewer
-hyper_C = function()
-  hs.eventtap.keyStroke({'shift', 'cmd', 'alt'}, '/')
-  k.triggered = true
-end
-k:bind({}, 'c', nil, hyper_C)
+hyperMode:bind({}, 'c', nil, function()
+  keyStroke({'shift', 'cmd', 'alt'}, '/')
+end)
 
 -- HYPER+J: Trigger down arrow
-hyper_J = function()
-  hs.eventtap.keyStroke({}, 'down')
-  k.triggered = true
-end
-k:bind({}, 'j', nil, hyper_J)
+hyperMode:bind({}, 'j', nil, function()
+  keyStroke({}, 'down')
+end)
 
 -- HYPER+K: Trigger up arrow
-hyper_K = function()
-  hs.eventtap.keyStroke({}, 'up')
-  k.triggered = true
-end
-k:bind({}, 'k', nil, hyper_K)
+hyperMode:bind({}, 'k', nil, function()
+  keyStroke({}, 'up')
+end)
 
 -- HYPER+H: Trigger left arrow
-hyper_H = function()
-  hs.eventtap.keyStroke({}, 'left')
-  k.triggered = true
-end
-k:bind({}, 'h', nil, hyper_H)
+hyperMode:bind({}, 'h', nil, function()
+  keyStroke({}, 'left')
+end)
 
 -- HYPER+L: Trigger right arrow
-hyper_L = function()
-  hs.eventtap.keyStroke({}, 'right')
-  k.triggered = true
-end
-k:bind({}, 'l', nil, hyper_L)
+hyperMode:bind({}, 'l', nil, function()
+  keyStroke({}, 'right')
+end)
 
 -- HYPER+3: Trigger full screen capture
-hyper_3 = function()
-  hs.eventtap.keyStroke({'shift', 'cmd'}, '3')
-  k.triggered = true
-end
-k:bind({}, '3', nil, hyper_3)
+hyperMode:bind({}, '3', nil, function()
+  keyStroke({'cmd', 'shift'}, '3')
+end)
 
 -- HYPER+4: Trigger drawable screen capture
-hyper_4 = function()
-  hs.eventtap.keyStroke({'shift', 'cmd'}, '4')
-  k.triggered = true
-end
-k:bind({}, '4', nil, hyper_4)
+hyperMode:bind({}, '4', nil, function()
+  keyStroke({'cmd', 'shift'}, '4')
+end)
+
+-- HYPER+\: Lock screen
+hyperMode:bind({}, '\\', nil, function()
+  hs.caffeinate.lockScreen()
+end)
+
+-- HYPER+0: Reload config
+hyperMode:bind({}, '0', nil, function()
+  hs.reload()
+end)
+
+-- ----------------------------
+-- Window Resizing and Movement
+-- ----------------------------
+
+-- From Wincent's config: https://git.io/v1jJD
+-- Chain the specified movement commands.
+--
+-- This is like the "chain" feature in Slate, but with a couple of enhancements:
+--
+--  - Chains always start on the screen the window is currently on.
+--  - A chain will be reset after 2 seconds of inactivity, or on switching from
+--    one chain to another, or on switching from one app to another, or from one
+--    window to another.
+--
+local lastSeenChain = nil
+local lastSeenWindow = nil
+
+local chain = (function(movements)
+  local chainResetInterval = 2 -- seconds
+  local cycleLength = #movements
+  local sequenceNumber = 1
+  local lastSeenAt = 0
+
+  return function()
+    hyperTriggered = true
+    local win = hs.window.frontmostWindow()
+    local id = win:id()
+    local now = hs.timer.secondsSinceEpoch()
+    local screen = win:screen()
+
+    if
+      lastSeenChain ~= movements or
+      lastSeenAt < now - chainResetInterval or
+      lastSeenWindow ~= id
+    then
+      sequenceNumber = 1
+      lastSeenChain = movements
+    elseif (sequenceNumber == 1) then
+      -- At end of chain, restart chain on next screen.
+      screen = screen:next()
+    end
+    lastSeenAt = now
+    lastSeenWindow = id
+
+    hs.grid.set(win, movements[sequenceNumber], screen)
+    sequenceNumber = sequenceNumber % cycleLength + 1
+  end
+end)
+
+local grid = {
+  topHalf = '0,0 12x6',
+  topThird = '0,0 12x4',
+  topTwoThirds = '0,0 12x8',
+  rightHalf = '6,0 6x12',
+  rightThird = '8,0 4x12',
+  rightTwoThirds = '4,0 8x12',
+  bottomHalf = '0,6 12x6',
+  bottomThird = '0,8 12x4',
+  bottomTwoThirds = '0,4 12x8',
+  leftHalf = '0,0 6x12',
+  leftThird = '0,0 4x12',
+  leftTwoThirds = '0,0 8x12',
+  topLeft = '0,0 6x6',
+  topRight = '6,0 6x6',
+  bottomRight = '6,6 6x6',
+  bottomLeft = '0,6 6x6',
+  fullScreen = '0,0 12x12',
+  centeredBig = '2,0 8x12',
+  centeredSmall = '3,0 6x12',
+  centeredSmaller = '4,0 4x12',
+}
+
+hyperMode:bind({}, ';', chain({
+  grid.leftHalf,
+  grid.leftThird,
+  grid.leftTwoThirds,
+}))
+
+hyperMode:bind({}, '\'', chain({
+  grid.rightHalf,
+  grid.rightThird,
+  grid.rightTwoThirds,
+}))
+
+hyperMode:bind({}, '-', chain({
+  grid.topHalf,
+  grid.topThird,
+  grid.topTwoThirds,
+}))
+
+hyperMode:bind({}, '=', chain({
+  grid.bottomHalf,
+  grid.bottomThird,
+  grid.bottomTwoThirds,
+}))
+
+hyperMode:bind({}, 'i', chain({
+  grid.topLeft,
+  grid.bottomLeft,
+  grid.topRight,
+  grid.bottomRight,
+}))
+
+hyperMode:bind({}, 'o', chain({
+  grid.fullScreen,
+  grid.centeredBig,
+  grid.centeredSmall,
+  grid.centeredSmaller,
+}))
+
+-- -----------
+-- Hyper Setup
+-- -----------
 
 -- Enter Hyper Mode when F18 (Hyper/Capslock) is pressed
 pressedF18 = function()
-  k.triggered = false
-  k:enter()
+  hyperTriggered = false
+  hyperMode:enter()
 end
 
 -- Leave Hyper Mode when F18 (Hyper/Capslock) is pressed,
 --   send ESCAPE if no other keys are pressed.
 releasedF18 = function()
-  k:exit()
-  if not k.triggered then
+  hyperMode:exit()
+  if not hyperTriggered then
     hs.eventtap.keyStroke({}, 'ESCAPE')
   end
 end
