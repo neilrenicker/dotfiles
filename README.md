@@ -46,6 +46,12 @@ If you're satisfied with the dry run, install the dotfiles on your system:
 rcup
 ```
 
+## Install brew casks
+
+```
+brew bundle install
+```
+
 ## Install Vim plugins with Vundle
 
 - Follow instructions to install [Vundle][]
