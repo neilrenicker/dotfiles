@@ -1,7 +1,5 @@
 # A little baby dotfiles repo
 
-*This is just the beginning.*
-
 Managed with [rcm][]
 
 ## Installation on a fresh machine
@@ -20,7 +18,13 @@ brew tap thoughtbot/formulae
 brew install rcm
 ```
 
-Do a dry run to see which files will be symlinked:
+Install the .rcrc file so rcm has configuration to run:
+
+```
+rcup rcrc
+```
+
+Now do a dry run to see which files will be symlinked:
 
 ```
 lsrc
