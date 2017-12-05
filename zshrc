@@ -13,7 +13,7 @@ DISABLE_AUTO_TITLE="true"
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-# Plugins 
+# Plugins
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(git rbenv)
 
@@ -46,6 +46,7 @@ eval "$(rbenv init - zsh --no-rehash)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # path configuration for Postgres.app
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
