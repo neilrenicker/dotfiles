@@ -9,11 +9,21 @@ Install these OS X applications before proceeding:
 - [iTerm2][] *terminal emulator*
 - [Atom][] *editor*
 
-### Dotfiles Installation:
+## First, install zsh and Homebrew
 
-After cloning the repo to `~/.dotfiles`, install [rcm][]:
+We'll use the [oh-my-zsh][] project for zsh and install Homebrew as well:
 
 ```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+### Dotfiles Installation:
+
+Now clone this repo into `~/.dotfiles`, and install [rcm][]::
+
+```
+git clone https://github.com/tinystride/dotfiles .dotfiles
 brew tap thoughtbot/formulae
 brew install rcm
 ```
@@ -35,6 +45,7 @@ If you're satisfied with the dry run, install the dotfiles on your system:
 ```
 rcup
 ```
+
 ## Install Vim plugins with Vundle
 
 - Follow instructions to install [Vundle][]
@@ -79,6 +90,7 @@ It will now stay in sync and be easily managed with source control.
 - Shell: [zsh][]
 - Source Control: [git][]
 
+[oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
 [rcm]: https://github.com/thoughtbot/rcm
 [vim]: http://www.vim.org
 [atom]: http://atom.io
