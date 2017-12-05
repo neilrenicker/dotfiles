@@ -19,9 +19,6 @@ plugins=(git rbenv)
 
 source $ZSH/oh-my-zsh.sh
 
-# aws-cli autocompletion
-source /usr/local/share/zsh/site-functions/_aws
-
 # Jump to any project:
 go() { cd ~/Code/$1; }
 _go() { _files -W ~/Code -/; }

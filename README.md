@@ -52,9 +52,10 @@ rcup
 brew bundle install
 ```
 
-## Install Vim plugins with Vundle
+## Install Vim plugins, nvm, and rvm
 
 - Follow instructions to install [Vundle][]
+- Follow instructions to install [nvm][]
 
 ## Set up key mapping:
 
@@ -106,3 +107,4 @@ It will now stay in sync and be easily managed with source control.
 [Vundle]: https://github.com/VundleVim/Vundle.vim
 [Karabiner-Elements]: https://github.com/tekezo/Karabiner-Elements
 [Hammerspoon]: http://www.hammerspoon.org/
+[nvm]: https://github.com/creationix/nvm
