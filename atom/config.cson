@@ -70,6 +70,9 @@
     extendAutocompleteToColorValue: true
     extendAutocompleteToVariables: true
   "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+      showInStatusBar: true
     prettierOptions: {}
     useEslint: true
   react: {}
