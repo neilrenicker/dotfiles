@@ -71,6 +71,10 @@ Install these applications before proceeding:
 during dotfiles installation
 - Key mapping setup should be complete!
 
+### Personalize iTerm
+
+- Follow instructions at <https://gist.github.com/kevin-smets/8568070> to complete setup for the Solarized color scheme witht the Meslo powerline font with Oh My Zsh.
+
 ## Adding new files to the project
 
 ```
