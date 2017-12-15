@@ -159,8 +159,8 @@ local grid = {
   fullScreen = '0,0 12x12',
   centeredBig = '2,0 8x12',
   centeredSmall = '3,0 6x12',
-  middleMedium = '2,2 8x8',
-  middleSmall = '3,3 6x6',
+  middleMedium = '3,2 6x8',
+  middleSmall = '4,3 4x6',
 }
 
 hyperMode:bind({}, ';', chain({
