@@ -75,9 +75,9 @@ hyperMode:bind({}, '3', nil, function()
   keyStroke({'cmd', 'shift'}, '3')
 end)
 
--- HYPER+4: Trigger drawable screen capture
+-- HYPER+4: Trigger Droplr's drawable screen capture (bypasses Desktop, uploads)
 hyperMode:bind({}, '4', nil, function()
-  keyStroke({'cmd', 'shift'}, '4')
+  keyStroke({'option', 'shift'}, '4')
 end)
 
 -- HYPER+\: Lock screen

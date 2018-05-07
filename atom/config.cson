@@ -44,6 +44,7 @@
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
+    softWrap: true
   emmet: {}
   "exception-reporting":
     userId: "1a9f1cf5-7699-d3b5-9666-be12c11cd652"
