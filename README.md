@@ -15,7 +15,6 @@ We'll use the [oh-my-zsh][] project for zsh and install Homebrew as well:
 
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 ### Dotfiles Installation:
