@@ -2,13 +2,6 @@
 
 Managed with [rcm][]
 
-## Installation on a fresh machine
-
-Install these OS X applications before proceeding:
-
-- [iTerm2][] *terminal emulator*
-- [Atom][] *editor*
-
 ## First, install zsh and Homebrew
 
 We'll use the [oh-my-zsh][] project for zsh and install Homebrew as well:
@@ -97,14 +90,14 @@ It will now stay in sync and be easily managed with source control.
 
 ## Features
 
-- Editor: [vim][] and [atom][]
+- Editor: [vim][] and [Visual Studio Code][]
 - Shell: [zsh][]
 - Source Control: [git][]
 
 [oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
 [rcm]: https://github.com/thoughtbot/rcm
 [vim]: http://www.vim.org
-[atom]: http://atom.io
+[Visual Studio Code]: https://code.visualstudio.com/  
 [zsh]: http://www.zsh.org
 [git]: http://git-scm.com
 [iTerm2]: https://www.iterm2.com/
