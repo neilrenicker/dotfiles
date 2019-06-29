@@ -67,7 +67,10 @@ Key mapping setup should be complete!
 
 ### Personalize iTerm
 
-- Follow instructions at <https://gist.github.com/kevin-smets/8568070> to complete setup for the Solarized color scheme with the Meslo powerline font with Oh My Zsh.
+- Install /assets/Meslo LG M Regular for Powerline.ttf
+- Install /assets/Solarized Dark - Patched.itermcolors
+
+Instructions at <https://gist.github.com/kevin-smets/8568070> 
 
 ## Adding new files to the project
 
