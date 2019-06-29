@@ -69,11 +69,12 @@ Install these applications before proceeding:
 - Karabiner-Elements > Simple Modifications > caps_lock to key f18
 - Hammerspoon > Reload Config to load the config that was auto-installed
 during dotfiles installation
-- Key mapping setup should be complete!
+
+Key mapping setup should be complete!
 
 ### Personalize iTerm
 
-- Follow instructions at <https://gist.github.com/kevin-smets/8568070> to complete setup for the Solarized color scheme witht the Meslo powerline font with Oh My Zsh.
+- Follow instructions at <https://gist.github.com/kevin-smets/8568070> to complete setup for the Solarized color scheme with the Meslo powerline font with Oh My Zsh.
 
 ## Adding new files to the project
 
