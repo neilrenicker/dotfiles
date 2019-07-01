@@ -42,7 +42,7 @@ hyperMode:bind({}, 'n', nil, function() launch('Bear') end)
 hyperMode:bind({}, 's', nil, function() launch('Sketch') end)
 hyperMode:bind({}, 'u', nil, function() launch('Spotify') end)
 hyperMode:bind({}, 'w', nil, function() launch('Tower') end)
-hyperMode:bind({}, 'x', nil, function() launch('OmniFocus') end)
+hyperMode:bind({}, 'x', nil, function() launch('Things3') end)
 hyperMode:bind({}, 'space', nil, function() launch('Google Chrome') end)
 
 -- HYPER+C: Trigger Alfred 2 Clipboard viewer
