@@ -35,7 +35,7 @@ end
 -- --------
 
 hyperMode:bind({}, 'd', nil, function() launch('Dash') end)
-hyperMode:bind({}, 'e', nil, function() launch('Atom') end)
+hyperMode:bind({}, 'e', nil, function() launch('Visual Studio Code') end)
 hyperMode:bind({}, 'f', nil, function() launch('Fantastical 2') end)
 hyperMode:bind({}, 'm', nil, function() launch('iTerm') end)
 hyperMode:bind({}, 'n', nil, function() launch('Bear') end)
