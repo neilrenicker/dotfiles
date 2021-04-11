@@ -65,12 +65,13 @@ during dotfiles installation
 
 Key mapping setup should be complete!
 
-### Personalize iTerm
+### Personalize teriminals 
 
 - Install /assets/Meslo LG M Regular for Powerline.ttf
 - Install /assets/Solarized Dark - Patched.itermcolors
 
-Instructions at <https://gist.github.com/kevin-smets/8568070> 
+Instructions for iTerm at <https://gist.github.com/kevin-smets/8568070> 
+Instructions for VSCode at <https://gist.github.com/480/3b41f449686a089f34edb45d00672f28>
 
 ## Adding new files to the project
 
