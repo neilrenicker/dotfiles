@@ -6,6 +6,5 @@ brew 'npm'
 brew 'rbenv'
 
 cask 'figma'
-cask 'bear'
 cask 'alfred'
 cask 'dash'
