@@ -73,6 +73,10 @@ Key mapping setup should be complete!
 Instructions for iTerm at <https://gist.github.com/kevin-smets/8568070> 
 Instructions for VSCode at <https://gist.github.com/480/3b41f449686a089f34edb45d00672f28>
 
+### Personalize Alfred
+
+- Install my custom macOS Dark Alfred theme: <https://www.alfredapp.com/extras/theme/JOEIP0l4M9/>
+
 ## Adding new files to the project
 
 ```

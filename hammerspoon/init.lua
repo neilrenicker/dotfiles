@@ -36,14 +36,15 @@ end
 
 hyperMode:bind({}, 'd', nil, function() launch('Dash') end)
 hyperMode:bind({}, 'e', nil, function() launch('Visual Studio Code') end)
-hyperMode:bind({}, 'f', nil, function() launch('Fantastical') end)
+hyperMode:bind({}, 'f', nil, function() launch('Calendar') end)
 hyperMode:bind({}, 'm', nil, function() launch('iTerm') end)
 hyperMode:bind({}, 'n', nil, function() launch('Bear') end)
 hyperMode:bind({}, 's', nil, function() launch('Figma') end)
 hyperMode:bind({}, 'u', nil, function() launch('Spotify') end)
 hyperMode:bind({}, 'w', nil, function() launch('Github Desktop') end)
 hyperMode:bind({}, 'x', nil, function() launch('Things3') end)
-hyperMode:bind({}, 'space', nil, function() launch('Google Chrome') end)
+hyperMode:bind({}, 'space', nil, function() launch('Safari') end)
+hyperMode:bind({}, 'q', nil, function() launch('Slack') end)
 
 -- HYPER+C: Trigger Alfred 2 Clipboard viewer
 hyperMode:bind({}, 'c', nil, function()
