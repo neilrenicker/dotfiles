@@ -1,10 +1,6 @@
-tap 'caskroom/cask'
+tap 'homebrew/cask'
 
 brew 'git'
-brew 'yarn'
 brew 'npm'
+brew 'yarn'
 brew 'rbenv'
-
-cask 'figma'
-cask 'alfred'
-cask 'dash'
