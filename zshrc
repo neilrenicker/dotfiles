@@ -47,3 +47,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # path configuration for Postgres.app
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
+
+# Added by Windsurf
+export PATH="/Users/tinystride/.codeium/windsurf/bin:$PATH"
