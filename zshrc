@@ -43,10 +43,5 @@ eval "$(rbenv init - zsh --no-rehash)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# path configuration for Postgres.app
-export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
-
-# Added by Windsurf
-export PATH="/Users/tinystride/.codeium/windsurf/bin:$PATH"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completionexport PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"

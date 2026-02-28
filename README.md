@@ -65,13 +65,10 @@ during dotfiles installation
 
 Key mapping setup should be complete!
 
-### Personalize teriminals 
+### Personalize terminals
 
-- Install /assets/Meslo LG M Regular for Powerline.ttf
-- Install /assets/Solarized Dark - Patched.itermcolors
-
-Instructions for iTerm at <https://gist.github.com/kevin-smets/8568070> 
-Instructions for VSCode at <https://gist.github.com/480/3b41f449686a089f34edb45d00672f28>
+- Install /assets/Meslo LG M Regular for Powerline.ttf (for prompt glyphs in zsh)
+- Terminal colors in Cursor follow the editor theme; use **Cursor Settings → Workbench → Color Theme** (or the integrated terminal color settings) to adjust.
 
 ### Personalize Alfred
 
@@ -98,17 +95,15 @@ It will now stay in sync and be easily managed with source control.
 
 ## Features
 
-- Editor: [vim][] and [Visual Studio Code][]
+- Editor: [vim][]
 - Shell: [zsh][]
 - Source Control: [git][]
 
 [oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
 [rcm]: https://github.com/thoughtbot/rcm
 [vim]: http://www.vim.org
-[Visual Studio Code]: https://code.visualstudio.com/  
 [zsh]: http://www.zsh.org
 [git]: http://git-scm.com
-[iTerm2]: https://www.iterm2.com/
 [Atom]: https://atom.io/
 [Vundle]: https://github.com/VundleVim/Vundle.vim
 [Karabiner-Elements]: https://github.com/tekezo/Karabiner-Elements

@@ -33,18 +33,18 @@ end
 -- --------
 -- Bindings
 -- --------
-
-hyperMode:bind({}, 'd', nil, function() launch('Framer') end)
+hyperMode:bind({}, 'd', nil, function() launch('Warp') end)
 hyperMode:bind({}, 'e', nil, function() launch('Cursor') end)
 hyperMode:bind({}, 'f', nil, function() launch('Calendar') end)
 hyperMode:bind({}, 'g', nil, function() launch('ChatGPT') end)
 hyperMode:bind({}, 'm', nil, function() launch('Superhuman') end)
-hyperMode:bind({}, 'n', nil, function() launch('Bear') end)
+hyperMode:bind({}, 'b', nil, function() launch('Bear') end)
+hyperMode:bind({}, 'n', nil, function() launch('Linear') end)
 hyperMode:bind({}, 's', nil, function() launch('Figma') end)
 hyperMode:bind({}, 'u', nil, function() launch('Spotify') end)
 hyperMode:bind({}, 'w', nil, function() launch('Github Desktop') end)
 hyperMode:bind({}, 'x', nil, function() launch('Todoist') end)
-hyperMode:bind({}, 'space', nil, function() launch('Arc') end)
+hyperMode:bind({}, 'space', nil, function() launch('Dia') end)
 hyperMode:bind({}, 'q', nil, function() launch('Slack') end)
 
 -- HYPER+C: Trigger Alfred 2 Clipboard viewer
