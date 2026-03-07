@@ -44,7 +44,7 @@ hyperMode:bind({}, 's', nil, function() launch('Figma') end)
 hyperMode:bind({}, 'u', nil, function() launch('Spotify') end)
 hyperMode:bind({}, 'w', nil, function() launch('Github Desktop') end)
 hyperMode:bind({}, 'x', nil, function() launch('Todoist') end)
-hyperMode:bind({}, 'space', nil, function() launch('Dia') end)
+hyperMode:bind({}, 'space', nil, function() launch('Google Chrome') end)
 hyperMode:bind({}, 'q', nil, function() launch('Slack') end)
 
 -- HYPER+C: Trigger Alfred 2 Clipboard viewer
