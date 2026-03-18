@@ -1,47 +1,30 @@
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-
-# Prevent full username from displaying in path.
+# --- Oh My Zsh ---
+export ZSH="$HOME/.oh-my-zsh"
 DEFAULT_USER="$USER"
-
-# oh-my-zsh theme (default-style prompt with git branch)
 ZSH_THEME="robbyrussell"
-
-# Uncomment the following line to disable auto-setting terminal title.
 DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
-
-# Plugins
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(git rbenv)
+source "$ZSH/oh-my-zsh.sh"
 
-source $ZSH/oh-my-zsh.sh
-
-# Jump to any project:
+# --- Navigation ---
+# Jump to any project: go <name>
 go() { cd ~/Code/$1; }
 _go() { _files -W ~/Code -/; }
 compdef _go go
 
-# User configuration
-
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Aliases
+# --- Aliases ---
 [[ -f ~/.aliases ]] && source ~/.aliases
 
-export PATH="$HOME/.bin:$PATH"
-
-# recommended by brew doctor
-export PATH="/usr/local/bin:$PATH"
-
+# --- PATH ---
+# Core: user bins, Homebrew, local bin
+export PATH="$HOME/bin:$HOME/.bin:/usr/local/bin:/usr/local/sbin:$HOME/.local/bin:$PATH"
+# Language/tooling
+export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$PATH:/usr/local/lib/node_modules"
 
-export PATH="$HOME/.rbenv/bin:$PATH"
+# --- Language / tooling ---
 eval "$(rbenv init - zsh --no-rehash)"
-
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH="$HOME/.local/bin:$PATH"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
