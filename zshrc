@@ -4,6 +4,9 @@ export ZSH=$HOME/.oh-my-zsh
 # Prevent full username from displaying in path.
 DEFAULT_USER="$USER"
 
+# oh-my-zsh theme (default-style prompt with git branch)
+ZSH_THEME="robbyrussell"
+
 # Uncomment the following line to disable auto-setting terminal title.
 DISABLE_AUTO_TITLE="true"
 
@@ -40,8 +43,5 @@ eval "$(rbenv init - zsh --no-rehash)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completionexport PATH="$HOME/.local/bin:$PATH"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export PATH="$HOME/.local/bin:$PATH"
-
-# Minimal prompt: short path + $
-export PS1='%1~ $ '
