@@ -45,9 +45,8 @@ rcup
 brew bundle install
 ```
 
-## Install Vim plugins, nvm, and rvm
+## Install nvm and rvm
 
-- Follow instructions to install [Vundle][]
 - Follow instructions to install [nvm][]
 
 ## Set up key mapping:
@@ -64,15 +63,6 @@ Install these applications before proceeding:
 during dotfiles installation
 
 Key mapping setup should be complete!
-
-### Personalize terminals
-
-- Install /assets/Meslo LG M Regular for Powerline.ttf (for prompt glyphs in zsh)
-- Terminal colors in Cursor follow the editor theme; use **Cursor Settings → Workbench → Color Theme** (or the integrated terminal color settings) to adjust.
-
-### Personalize Alfred
-
-- Install my custom macOS Dark Alfred theme: <https://www.alfredapp.com/extras/theme/JOEIP0l4M9/>
 
 ## Adding new files to the project
 
@@ -93,19 +83,11 @@ dot prefix removed. The original file will be deleted,
 then symlinked from `~/.dotfiles` back to its original location.
 It will now stay in sync and be easily managed with source control.
 
-## Features
-
-- Editor: [vim][]
-- Shell: [zsh][]
-- Source Control: [git][]
-
 [oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
 [rcm]: https://github.com/thoughtbot/rcm
-[vim]: http://www.vim.org
 [zsh]: http://www.zsh.org
 [git]: http://git-scm.com
 [Atom]: https://atom.io/
-[Vundle]: https://github.com/VundleVim/Vundle.vim
 [Karabiner-Elements]: https://github.com/tekezo/Karabiner-Elements
 [Hammerspoon]: http://www.hammerspoon.org/
 [nvm]: https://github.com/creationix/nvm

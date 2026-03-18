@@ -4,9 +4,6 @@ export ZSH=$HOME/.oh-my-zsh
 # Prevent full username from displaying in path.
 DEFAULT_USER="$USER"
 
-# Theming: ~/.oh-my-zsh/themes/
-ZSH_THEME="agnoster"
-
 # Uncomment the following line to disable auto-setting terminal title.
 DISABLE_AUTO_TITLE="true"
 

@@ -17,7 +17,6 @@
 [push]
   default = simple
 [core]
-  editor = vim
   trustctime = false
   ignorecase = false
 [alias]
