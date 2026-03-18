@@ -33,7 +33,7 @@ end
 -- --------
 -- Bindings
 -- --------
-hyperMode:bind({}, 'd', nil, function() launch('Warp') end)
+hyperMode:bind({}, 'd', nil, function() launch('Ghostty') end)
 hyperMode:bind({}, 'e', nil, function() launch('Cursor') end)
 hyperMode:bind({}, 'f', nil, function() launch('Calendar') end)
 hyperMode:bind({}, 'g', nil, function() launch('ChatGPT') end)
