@@ -37,7 +37,6 @@ hyperMode:bind({}, 'd', nil, function() launch('Ghostty') end)
 hyperMode:bind({}, 'e', nil, function() launch('Cursor') end)
 hyperMode:bind({}, 'f', nil, function() launch('Calendar') end)
 hyperMode:bind({}, 'g', nil, function() launch('ChatGPT') end)
-hyperMode:bind({}, 'm', nil, function() launch('Superhuman') end)
 hyperMode:bind({}, 'b', nil, function() launch('Bear') end)
 hyperMode:bind({}, 'n', nil, function() launch('Linear') end)
 hyperMode:bind({}, 's', nil, function() launch('Figma') end)
@@ -46,6 +45,12 @@ hyperMode:bind({}, 'w', nil, function() launch('Github Desktop') end)
 hyperMode:bind({}, 'x', nil, function() launch('Todoist') end)
 hyperMode:bind({}, 'space', nil, function() launch('Google Chrome') end)
 hyperMode:bind({}, 'q', nil, function() launch('Slack') end)
+
+-- Gmail inbox (default browser)
+hyperMode:bind({}, 'm', nil, function()
+  hyperTriggered = true
+  hs.urlevent.openURL('https://mail.google.com/mail/u/0/#inbox')
+end)
 
 -- HYPER+C: Trigger Alfred 2 Clipboard viewer
 hyperMode:bind({}, 'c', nil, function()
